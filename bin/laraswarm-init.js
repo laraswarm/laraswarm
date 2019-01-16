@@ -1,17 +1,29 @@
 const program = require("commander");
-var inquirer = require("inquirer");
+const inquirer = require("inquirer");
+const nodepath = require("path");
+const fs = require("fs");
 
 program
   .version("1.0.0")
-  .usage("[path]")
   .description("Initialize a project folder, default path is current directory")
-  .action(path => {
-    console.log(path);
-    let questions = [];
+  .arguments("[path]")
+  .action((path) => {
+    path = path || '.';
+    path = nodepath.resolve(path);
+
+    fs.mkdirSync(path, {
+      recursive: true
+    });
+
+    const questions = [];
     questions.push({
       name: 'name',
-      message: 'Your project\'s name',
-      default: path
+      message: 'Project\'s name',
+      default: nodepath.basename(path)
+    });
+    questions.push({
+      name: "description",
+      message: "Project's description"
     });
     questions.push({
       name: "pkgmanager",
@@ -22,7 +34,7 @@ program
     questions.push({
       name: "style",
       type: "list",
-      message: "Default application style",
+      message: "Application style",
       choices: [
         { name: "Twitter's Bootstrap 4", value: "bootstrap" }, 
         { name: "Angular's Material", value: "material" },

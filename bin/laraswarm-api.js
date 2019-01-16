@@ -1,5 +1,5 @@
 const program = require("commander");
-var inquirer = require("inquirer");
+const inquirer = require("inquirer");
 
 program.version("1.0.0");
 
