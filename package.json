@@ -1,0 +1,34 @@
+{
+  "name": "laraswarm",
+  "version": "1.0.0",
+  "description": "Laravel, SWagger, Angular Rapid Maker",
+  "main": "./bin/laraswarm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "laraswarm": "./bin/laraswarm.js"
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laraswarm/laraswarm.git"
+  },
+  "keywords": [
+    "Laravel",
+    "SWagger",
+    "Angular",
+    "Rapid",
+    "Maker"
+  ],
+  "author": "Thao Le <thaolt@songphi.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laraswarm/laraswarm/issues"
+  },
+  "homepage": "https://laraswarm.github.io",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.1"
+  }
+}
