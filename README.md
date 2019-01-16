@@ -1,5 +1,5 @@
 # laraswarm
-Laravel, SWagger, Angular Rapid Maker
+Laravel, SWagger, Angular Rapid Maker. Obviously someone really want to call it LaraSwarm :laughing:
 
 ## Installation
 
