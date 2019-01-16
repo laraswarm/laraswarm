@@ -23,4 +23,4 @@ yarn global add laraswarm
 laraswarm init <project-path>
 ```
 
-Default @project-path@ to current directory
+Default `project-path` to current directory
